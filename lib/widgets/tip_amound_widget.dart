@@ -28,11 +28,11 @@ class TipAmountWidget extends StatelessWidget {
                 child:
 
                     Text(
-                      "€ 1",
+                      "LKR 10",
                       style: Theme.of(context).textTheme.caption.copyWith(
                           fontWeight: FontWeight.w600,
                           color: selectIndex == 1 ? Colors.white : Colors.black,
-                          fontSize: 28),
+                          fontSize: 20),
                     ),
 
               ),
@@ -51,11 +51,11 @@ class TipAmountWidget extends StatelessWidget {
               child: Center(
                 child:
                      Text(
-                      "€ 2",
+                       "LKR 20",
                       style: Theme.of(context).textTheme.caption.copyWith(
                           fontWeight: FontWeight.w600,
                           color: selectIndex == 2 ? Colors.white : Colors.black,
-                          fontSize: 28),
+                          fontSize: 20),
                     ),
 
               ),
@@ -74,11 +74,11 @@ class TipAmountWidget extends StatelessWidget {
                 child:
 
                 Text(
-                  "€ 5",
+                  "LKR 50",
                   style: Theme.of(context).textTheme.caption.copyWith(
                       fontWeight: FontWeight.w600,
                       color: selectIndex == 3 ? Colors.white : Colors.black,
-                      fontSize: 28),
+                      fontSize: 20),
                 ),
                ),
             ),

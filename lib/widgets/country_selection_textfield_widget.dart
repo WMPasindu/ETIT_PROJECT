@@ -31,8 +31,8 @@ class CountrySelectionTextField extends StatefulWidget {
 }
 
 class _CountrySelectionTextFieldState extends State<CountrySelectionTextField> {
-  var _selectIoCode = "IN";
-  var _selectPhoneCode = "91";
+  var _selectIoCode = "LK";
+  var _selectPhoneCode = "94";
 
   @override
   void dispose() {
@@ -102,6 +102,7 @@ class _CountrySelectionTextFieldState extends State<CountrySelectionTextField> {
                     counterText: "",
                   ),
                   onChanged: (str) {
+                    // print("========= $str")
                     widget.onChanged(str);
                   },
                   onSubmitted: (str) {

@@ -34,10 +34,10 @@ class _GoodToSeeYouBottomSheetState extends State<GoodToSeeYouBottomSheet> {
     "Coudriers",
   ];
   List<String> favAddAddresses = [
-    "50, rue des Lacs, 83400 HYÈRES",
-    "19, rue La Boétie 75016 PARIS",
-    "66, avenue Ferdinand de Lesseps 33170",
-    "69, rue des Coudriers 03000 MOULINS"
+    "Malabe town, Sri Lanka",
+    "111, SLIIT Main Bld",
+    "66, avenue de lorenzo place 33170",
+    "69, rue des place 03000 colmobo 12"
   ];
 
   @override
@@ -46,7 +46,7 @@ class _GoodToSeeYouBottomSheetState extends State<GoodToSeeYouBottomSheet> {
       child: Column(
         children: <Widget>[
           Text(
-            "Hello Giampaolo, good to see you!",
+            "Hello ETIT, good to see you!",
             style: Theme.of(context).textTheme.caption.copyWith(
                   color: kPrimaryColor,
                   letterSpacing: 0.43,

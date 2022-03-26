@@ -111,10 +111,10 @@ class RouteGenerator {
           builder: (_) => LoyaltyProgramDetailsScreen(),
         );
 
-      case FreeRidesHowWorkDetailsScreen.routeName:
-        return MaterialPageRoute(
-          builder: (_) => FreeRidesHowWorkDetailsScreen(),
-        );
+      // case FreeRidesHowWorkDetailsScreen.routeName:
+      //   return MaterialPageRoute(
+      //     builder: (_) => FreeRidesHowWorkDetailsScreen(),
+      //   );
 
       case CashScreen.routeName:
         return MaterialPageRoute(

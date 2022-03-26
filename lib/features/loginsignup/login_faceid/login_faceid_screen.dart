@@ -114,7 +114,7 @@ class _LoginFaceIDState extends State<LoginFaceID> {
             ),
             child: Text(
               "Allow sign in with Face ID?",
-              style: Theme.of(context).textTheme.titleMedium.copyWith(
+              style: Theme.of(context).textTheme.bodyText1.copyWith(
                     color: kLoginBlack,
                     letterSpacing: 0.47,
                     fontSize: 20,

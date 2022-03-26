@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_taxi_booking_customer_app/common/my_colors.dart';
 import 'package:flutter_taxi_booking_customer_app/common/viiticons_icons.dart';
 
+import 'flat_button_widget.dart';
 
 class FromToLocationCard extends StatelessWidget {
   final String fromLocation;
@@ -38,7 +39,7 @@ class FromToLocationCard extends StatelessWidget {
                   children: <Widget>[
                     Container(
                         width: 20,
-                        height: 120,
+                        height: 130,
                         child: Column(
                           children: <Widget>[
                             Container(
@@ -150,17 +151,6 @@ class FromToLocationCard extends StatelessWidget {
                                 ),
                                 opacity: 0.64,
                               ),
-                              isPlusVisible
-                                  ? Padding(
-                                      padding: const EdgeInsets.only(
-                                          right: 10, top: 2),
-                                      child: Icon(
-                                        Viiticons.plus,
-                                        size: 18,
-                                        color: kPrimaryColor,
-                                      ),
-                                    )
-                                  : SizedBox(),
                             ],
                           ),
                         ),
@@ -186,21 +176,65 @@ class FromToLocationCard extends StatelessWidget {
               ),
               child: Center(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6),
-                      child: Icon(
-                        Icons.arrow_upward,
-                        size: 16,
-                        color: Colors.white,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 4),
-                      child: Icon(
-                        Icons.arrow_downward,
-                        size: 16,
-                        color: Colors.white,
+                    Expanded(
+                      child: IconButton(
+                        iconSize: 16,
+                        onPressed: () => {
+                          showDialog(
+                              context: context,
+                              builder: (context) {
+                                return AlertDialog(
+                                  title: new Text("Mode of transporting"),
+                                  content: Container(
+                                    height: 100,
+                                    width: 200,
+                                    child: Column(
+                                      children: <Widget>[
+                                        new Text("Transport mode"),
+                                        new DropdownButton<String>(
+                                          underline: Container(),
+                                          items: <String>[
+                                            'Bus',
+                                            'Bus A/C',
+                                            'Train',
+                                            'Train A/C',
+                                            'Taxi (Three Wheel)',
+                                            'Taxi (Car)',
+                                            'Taxi (Van)',
+                                          ].map((String value) {
+                                            return new DropdownMenuItem<String>(
+                                              value: value,
+                                              child: new Text(
+                                                value,
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.w500),
+                                              ),
+                                            );
+                                          }).toList(),
+                                          onChanged: (String value) {},
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  actions: [
+                                    FlatButtonWidget(
+                                      btnTxt: "Ok",
+                                      btnColor: kAccentColor,
+                                      btnOnTap: () {
+                                        Navigator.of(context, rootNavigator: true).pop('dialog');
+                                      },
+                                    )
+                                  ],
+                                );
+                              }),
+                        },
+                        icon: Icon(
+                          Icons.add,
+                          color: Colors.white,
+                        ),
                       ),
                     )
                   ],

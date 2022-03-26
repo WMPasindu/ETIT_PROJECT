@@ -94,7 +94,7 @@ class _LanguageState extends State<Language> {
                 height: 32,
               ),
               LanguageButton(
-                btnTxt: "English",
+                btnTxt: "සිංහල",
                 isShowIcon: true,
                 btnOnTap: () {
                   application.onLocaleChanged(Locale("en", "English"));
@@ -107,7 +107,7 @@ class _LanguageState extends State<Language> {
                 height: 16,
               ),
               LanguageButton(
-                btnTxt: "French",
+                btnTxt: "English",
                 btnOnTap: () {
                   application.onLocaleChanged(Locale("fr", "French"));
                   languageBloc.add(SelectLanEvent("fr", "French"));

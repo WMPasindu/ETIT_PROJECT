@@ -73,35 +73,35 @@ class MyNavDrawer extends StatelessWidget {
                         ? NavItemDecorationType.SELECTED
                         : NavItemDecorationType.NONE,
                   ),
-                  NavMenuItem(
-                    myOnTap: () {
-                      onNavItemChange(3);
-                    },
-                    context: context,
-                    title: "Free Rides",
-                    icon: Viiticons.my_rides,
-                    iconSize: 22,
-                    navDecorationType: currentSelectedNavItem == 3
-                        ? NavItemDecorationType.SELECTED
-                        : NavItemDecorationType.NONE,
-                  ),
-                  NavMenuItem(
-                    myOnTap: () {
-                      onNavItemChange(4);
-                    },
-                    context: context,
-                    title: "Loyalty Program",
-                    icon: Viiticons.loyalty_program,
-                    navDecorationType: currentSelectedNavItem == 4
-                        ? NavItemDecorationType.SELECTED
-                        : NavItemDecorationType.NONE,
-                  ),
+                  // NavMenuItem(
+                  //   myOnTap: () {
+                  //     onNavItemChange(3);
+                  //   },
+                  //   context: context,
+                  //   title: "Free Rides",
+                  //   icon: Viiticons.my_rides,
+                  //   iconSize: 22,
+                  //   navDecorationType: currentSelectedNavItem == 3
+                  //       ? NavItemDecorationType.SELECTED
+                  //       : NavItemDecorationType.NONE,
+                  // ),
+                  // NavMenuItem(
+                  //   myOnTap: () {
+                  //     onNavItemChange(4);
+                  //   },
+                  //   context: context,
+                  //   title: "Loyalty Program",
+                  //   icon: Viiticons.loyalty_program,
+                  //   navDecorationType: currentSelectedNavItem == 4
+                  //       ? NavItemDecorationType.SELECTED
+                  //       : NavItemDecorationType.NONE,
+                  // ),
                   NavMenuItem(
                     myOnTap: () {
                       onNavItemChange(5);
                     },
                     context: context,
-                    title: "Feel Good",
+                    title: "Health Status",
                     icon: Viiticons.feel_good,
                     navDecorationType: NavItemDecorationType.HIGHLIGHTED,
                   ),
@@ -175,7 +175,7 @@ class MyNavDrawer extends StatelessWidget {
               width: 4,
             ),
             Text(
-              "Drive with Viit",
+              "Drive with TravelAzist",
               style: Theme.of(context).textTheme.subtitle1.copyWith(
                     color: Colors.white,
                     fontSize: 16,
@@ -208,8 +208,8 @@ class MyNavDrawer extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               title: Text(
-                "Melissa Brunt",
-                style: Theme.of(context).textTheme.titleMedium.copyWith(
+                "Jane Doe",
+                style: Theme.of(context).textTheme.bodyText1.copyWith(
                       fontSize: 18,
                       color: Colors.white,
                     ),

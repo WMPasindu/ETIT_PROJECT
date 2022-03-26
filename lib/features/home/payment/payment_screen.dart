@@ -101,6 +101,25 @@ class _PaymentState extends State<Payment> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
+                      "Tavel Card (Azist Only)",
+                      style: Theme.of(context).textTheme.caption.copyWith(
+                        color: kLoginBlack,
+                        fontSize: 16,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Icon(
+                      Viiticons.card,
+                      size: 24,
+                      color: kTextLoginfaceid,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+
+                    Text(
                       "Credit Card",
                       style: Theme.of(context).textTheme.caption.copyWith(
                             color: kLoginBlack,
@@ -118,6 +137,7 @@ class _PaymentState extends State<Payment> {
                     SizedBox(
                       height: 10,
                     ),
+
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -141,49 +161,6 @@ class _PaymentState extends State<Payment> {
                     ),
                     SizedBox(
                       height: 20,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).pushNamed(
-                          GPayScreen.routeName,
-                        );
-                      },
-                      child: PayWidget(
-                        payLogo: "assets/google.png",
-                        payName: "Google Pay",
-                        email: "melissa.brunt69@gmail.com",
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Container(
-                      height: 0.5,
-                      width: MediaQuery.of(context).size.width,
-                      color: kGrey,
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).pushNamed(
-                          ApplePayScreen.routeName,
-                        );
-                      },
-                      child: PayWidget(
-                        payLogo: "assets/apple.png",
-                        payName: "Apple Pay",
-                        email: "melissa.brunt69@gmail.com",
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Container(
-                      height: 0.5,
-                      width: MediaQuery.of(context).size.width,
-                      color: kGrey,
                     ),
                     SizedBox(
                       height: 30,

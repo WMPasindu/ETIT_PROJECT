@@ -3,8 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_taxi_booking_customer_app/common/my_colors.dart';
 import 'package:flutter_taxi_booking_customer_app/features/home/feel_good/bloc/feel_good_bloc.dart';
 
-
-
 class FeelGoodScreen extends StatelessWidget {
   static const String routeName = "feelgood";
 
@@ -38,7 +36,7 @@ class _FeelGoodState extends State<FeelGood> {
             height: 20,
           ),
           Image.asset(
-            "assets/donate.png",
+            "assets/covid-19-avatar.png",
             width: 221,
             height: 221,
           ),
@@ -53,7 +51,7 @@ class _FeelGoodState extends State<FeelGood> {
             child: Column(
               children: <Widget>[
                 Text(
-                  "Do good, feel good!",
+                  "Update Covid 19 Status",
                   style: Theme.of(context).textTheme.caption.copyWith(
                         fontWeight: FontWeight.w500,
                         color: kLoginBlack,
@@ -63,134 +61,61 @@ class _FeelGoodState extends State<FeelGood> {
                 SizedBox(
                   height: 20,
                 ),
-                Opacity(
-                  opacity: 0.9,
-                  child: Text(
-                    "As per our motto, every ride counts. YOU are the protagonist with your Vitt rides!",
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.caption.copyWith(
-                          color: kTextLoginfaceid,
-                          fontSize: 15,
-                          letterSpacing: 0.35,
-                        ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Opacity(
-                  opacity: 0.9,
-                  child: Text(
-                    "Without you adding extra money, we donate 1% of your rides to your favourite charity. Choose it below!",
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.caption.copyWith(
-                          color: kTextLoginfaceid,
-                          fontSize: 15,
-                          letterSpacing: 0.35,
-                        ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-              ],
-            ),
-          ),
-          Container(
-            height: 100,
-            margin: const EdgeInsets.only(bottom: 15),
-            child: MediaQuery.removePadding(
-              context: context,
-              removeTop: true,
-              removeRight: true,
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  shrinkWrap: true,
-                  itemCount: imageArry.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Container(
-                        height: 100,
-                        width: 100,
-                        padding: const EdgeInsets.all(10),
-                        margin: const EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border:
-                                Border.all(width: 1, color: Color(0XFFC6C2C2))),
-                        child: Center(
-                          child: Image.asset("${imageArry[index]}"),
-                        ));
-                  }),
-            ),
-          ),
-          Container(
-            height: 80,
-            color: Color(0xFFF3F3F3),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
                 Text(
-                  "Your contribution",
-                  style: Theme.of(context).textTheme.caption.copyWith(
-                        color: kLoginBlack,
-                        fontSize: 18,
-                      ),
+                  "If you got infected with covid 19 recently you can let other know anonymously. This is kind remider of your social responsibility",
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
                 ),
                 SizedBox(
-                  height: 5,
+                  height: 50,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      "€ 2.5",
-                      style: Theme.of(context).textTheme.caption.copyWith(
-                            color: kPrimaryColor,
-                            fontSize: 22,
+                Text(
+                  "Date of infected ",
+                  style: TextStyle(fontSize: 20),
+                ),
+                DatePickerDialog(
+                    initialDate: DateTime.now(),
+                    firstDate: DateTime(2022, 01, 01),
+                    lastDate: DateTime.now()),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  width: 300,
+                  padding: EdgeInsets.all(0),
+                  decoration: BoxDecoration(
+                      color: kPrimaryColor, borderRadius: BorderRadius.zero),
+                  child: DropdownButton(
+                      style: TextStyle(color: Colors.white),
+                      items: <String>['Delta', 'Omicron', 'Other']
+                          .map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(
+                            value,
+                            style: TextStyle(color: Colors.black),
                           ),
-                    ),
-                  ],
+                        );
+                      }).toList(),
+                      underline: Container(),
+                      hint: Padding(
+                        padding: EdgeInsets.only(left: 10, right: 10),
+                        child: Text(
+                          "Select the variant type",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      icon: Icon(
+                        Icons.arrow_downward,
+                        color: Colors.white,
+                      ),
+                      isExpanded: true,
+                      onChanged: (_) => {}),
+                ),
+                SizedBox(
+                  height: 20,
                 ),
               ],
             ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20),
-            child: Text(
-              "Check the monthly newsletter to find out more about our Feel Good campaign!",
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.caption.copyWith(
-                    color: kPrimaryColor,
-                    fontSize: 14,
-                  ),
-            ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                "Vitt cares",
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.caption.copyWith(
-                      color: kPrimaryColor,
-                      fontSize: 14,
-                    ),
-              ),
-              SizedBox(
-                width: 2,
-              ),
-              Icon(
-                Icons.favorite,
-                size: 20,
-                color: Colors.red,
-              ),
-            ],
           ),
           SizedBox(
             height: 20,

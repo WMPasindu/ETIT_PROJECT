@@ -65,17 +65,17 @@ class _FreeRidesState extends State<FreeRides> {
           SizedBox(
             height: 8,
           ),
-          Center(
-            child: BorderButtonWidget(
-                text: "How Invites Work",
-                myOnTap: () {
-                  Navigator.of(context)
-                      .pushNamed(FreeRidesHowWorkDetailsScreen.routeName);
-                }),
-          ),
-          SizedBox(
-            height: 6,
-          ),
+          // Center(
+          //   child: BorderButtonWidget(
+          //       text: "How Invites Work",
+          //       myOnTap: () {
+          //         Navigator.of(context)
+          //             .pushNamed(FreeRidesHowWorkDetailsScreen.routeName);
+          //       }),
+          // ),
+          // SizedBox(
+          //   height: 6,
+          // ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
             child: Text(

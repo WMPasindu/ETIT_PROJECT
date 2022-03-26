@@ -143,7 +143,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                           Text(
                             widget.titles[index],
                             style:
-                                Theme.of(context).textTheme.displayMedium.copyWith(
+                                Theme.of(context).textTheme.bodyText1.copyWith(
                                       color: Colors.white,
                                       fontSize: 32,
                                       fontWeight: FontWeight.w500,
@@ -190,7 +190,7 @@ class _OnboardWidgetState extends State<OnboardWidget> {
                       onTap: widget.myOnSkipPressed,
                       child: Text(
                         "Skip",
-                        style: Theme.of(context).textTheme.titleMedium.copyWith(
+                        style: Theme.of(context).textTheme.bodyText1.copyWith(
                               color: kAccentColor,
                             ),
                       ),
