@@ -31,10 +31,10 @@ class _VehicleInformationState extends State<VehicleInformation> {
 
   static CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(
-      37.42796133580664,
-      -122.085749655962,
+      6.9162317,
+      79.9708,
     ),
-    zoom: 12.4746,
+    zoom: 14,
   );
 
   @override

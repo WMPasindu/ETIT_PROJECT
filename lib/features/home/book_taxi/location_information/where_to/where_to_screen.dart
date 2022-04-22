@@ -47,20 +47,18 @@ class _WhereToState extends State<WhereTo> {
   List<String> addTitles = [
     "Home",
     "Saved Places",
-    "Red Bus Stop",
-    "Rue La",
-    "Beauchesne",
-    "Rue des Lacs",
-    "Rue des Lacs"
+    "Pattipola holiday bungalow",
+    "North Gate by Jetwing",
+    "DoubleTree by Hilton",
+    "Kingcity Resort",
   ];
   List<String> addAdd = [
-    "66, avenue Ferdinand de Lesseps 33170 GRADIGNAN",
+    "111, SLIIT Main Bld",
     "",
-    "38, rue des Nations Unies SAINT",
-    "19, rue La Boétie 75016 PARIS",
-    "52, rue Gouin de Beauchesne NAZAIRE",
-    "50, rue des Lacs, 83400 HYÈRES",
-    "50, rue des Lacs, 83400 HYÈRES"
+    "Pattipola holiday bungalow, 42 World's End Rd, Pattipola 22216",
+    "136 Station Rd, Jaffna 40000",
+    "Weerawila Watta, Wirawila 82632",
+    "335/17, Bandaranaike Mawatha, Anuradhapura•0252 050 541",
   ];
 
   @override
@@ -114,7 +112,7 @@ class _WhereToState extends State<WhereTo> {
                     Padding(
                       padding: const EdgeInsets.only(top: 12,right: 2),
                       child: FromToLocationCard(
-                        fromLocation: "54, rue du Gue Jacquet",
+                        fromLocation: "SLIIT, Main Build, Malabe",
                         toLocation: "Destination",
                         onTapSwitch: (){
                           print("Switch address");

@@ -8,7 +8,6 @@ import 'package:flutter_taxi_booking_customer_app/features/language/bloc/languag
 import 'package:flutter_taxi_booking_customer_app/features/onboard/onboard_screen.dart';
 import 'package:flutter_taxi_booking_customer_app/widgets/language_button.dart';
 
-
 class LanguageScreen extends StatelessWidget {
   static const String routeName = "/language";
 
@@ -86,15 +85,15 @@ class _LanguageState extends State<Language> {
               ),
               Text(
                 "Select Language",
-                style: Theme.of(context).textTheme.headline2.copyWith(
+                style: Theme.of(context).textTheme.headline4.copyWith(
                       color: Colors.white,
                     ),
               ),
               SizedBox(
-                height: 32,
+                height: 60,
               ),
               LanguageButton(
-                btnTxt: "English",
+                btnTxt: "සිංහල",
                 isShowIcon: true,
                 btnOnTap: () {
                   application.onLocaleChanged(Locale("en", "English"));
@@ -107,7 +106,7 @@ class _LanguageState extends State<Language> {
                 height: 16,
               ),
               LanguageButton(
-                btnTxt: "French",
+                btnTxt: "English",
                 btnOnTap: () {
                   application.onLocaleChanged(Locale("fr", "French"));
                   languageBloc.add(SelectLanEvent("fr", "French"));

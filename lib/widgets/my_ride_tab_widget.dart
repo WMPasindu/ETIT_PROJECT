@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_taxi_booking_customer_app/common/my_colors.dart';
 
-
 class MyRideTabWidget extends StatelessWidget {
   final Function onTapUpcoming;
   final Function onTapComplet;
@@ -70,71 +69,42 @@ class MyRideTabWidget extends StatelessWidget {
                           )),
                     )),
                 Expanded(
-                    flex: 1,
-                    child: GestureDetector(
-                      onTap: onTapComplet,
-                      child: Container(
-                          alignment: Alignment.bottomCenter,
-                          decoration: BoxDecoration(
-                            border: Border(
-                              left: BorderSide(
-                                width: 1.0,
-                                color: kAccentColor,
-                              ),
-                              right: BorderSide(
-                                width: 1.0,
-                                color: kAccentColor,
-                              ),
+                  flex: 1,
+                  child: GestureDetector(
+                    onTap: onTapComplet,
+                    child: Container(
+                        alignment: Alignment.bottomCenter,
+                        decoration: BoxDecoration(
+                          border: Border(
+                            left: BorderSide(
+                              width: 1.0,
+                              color: kAccentColor,
                             ),
-                            color:
-                                completRideSelect ? kAccentColor : Colors.white,
+                            right: BorderSide(
+                              width: 1.0,
+                              color: kAccentColor,
+                            ),
                           ),
-                          child: Center(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Text('Completed',
-                                    style: TextStyle(
-                                      fontSize: 16.0,
-                                      color: completRideSelect
-                                          ? Colors.white
-                                          : kLoginBlack,
-                                    )),
-                                //varaible above
-                              ],
-                            ),
-                          )),
-                    )),
-                Expanded(
-                    flex: 1,
-                    child: GestureDetector(
-                      onTap: onTapCancele,
-                      child: Container(
-                          alignment: Alignment.bottomCenter,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                topRight: const Radius.circular(10),
-                                bottomRight: const Radius.circular(10),
-                              ),
-                              color: canceledRideSelect
-                                  ? Color(0xffF3AA05)
-                                  : Colors.white),
-                          child: Center(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Text("Canceled",
-                                    style: TextStyle(
-                                        fontSize: 16.0,
-                                        color: canceledRideSelect
-                                            ? Colors.white
-                                            : kLoginBlack,
-                                        fontWeight: FontWeight.w500)),
-                                //varaible above
-                              ],
-                            ),
-                          )),
-                    )),
+                          color:
+                              completRideSelect ? kAccentColor : Colors.white,
+                        ),
+                        child: Center(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text('Completed',
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    color: completRideSelect
+                                        ? Colors.white
+                                        : kLoginBlack,
+                                  )),
+                              //varaible above
+                            ],
+                          ),
+                        )),
+                  ),
+                ),
               ],
             ),
           ),

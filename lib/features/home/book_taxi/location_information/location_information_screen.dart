@@ -60,10 +60,10 @@ class _LocationInformationState extends State<LocationInformation> {
 
   static CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(
-      37.42796133580664,
-      -122.085749655962,
+      6.9162317,
+      79.9708,
     ),
-    zoom: 12.4746,
+    zoom: 14,
   );
 
   static final CameraPosition _kLake = CameraPosition(
@@ -93,7 +93,7 @@ class _LocationInformationState extends State<LocationInformation> {
   List<IconData> favAddIcons = [Viiticons.home, Viiticons.work, Viiticons.home];
   List<String> favAddTitle = ["Home", "Work", "Gym"];
   List<String> favAddAddresses = [
-    "50, rue des Lacs, 83400 HYERESS",
+    "111, SLIIT Main Bld, Malabe",
     "19, rue La Boétie 75016 PARIS",
     "66, avenue Ferdinand de Lesseps 33170"
   ];
@@ -110,14 +110,15 @@ class _LocationInformationState extends State<LocationInformation> {
         desiredAccuracy: LocationAccuracy.bestForNavigation);
 
     position.then((onValue) {
-      _kGooglePlex = CameraPosition(
-        target: LatLng(
-          onValue.latitude,
-          onValue.longitude,
-        ),
-        zoom: 12.4746,
-      );
-      setState(() {});
+      setState(() {
+        _kGooglePlex = CameraPosition(
+          target: LatLng(
+            onValue.latitude,
+            onValue.longitude,
+          ),
+          zoom: 14,
+        );
+      });
     });
   }
 
@@ -173,8 +174,8 @@ class _LocationInformationState extends State<LocationInformation> {
                       return Container(
                         margin: const EdgeInsets.only(top: 10),
                         child: FromToLocationCard(
-                          fromLocation: "54, rue du Gue Jacquet",
-                          toLocation: "38, rue des Nations",
+                          fromLocation: "Kottawa Town, Sri Lanka",
+                          toLocation: "SLLIT, Metro campus, Wallawatte",
                           isPlusVisible: false,
                         ),
                       );
@@ -211,8 +212,8 @@ class _LocationInformationState extends State<LocationInformation> {
                               Navigator.of(context).pushNamed(
                                 VehicleInformationScreen.routeName,
                                 arguments: VehicleInformationScreenArguments(
-                                  fromLoc: "",
-                                  toLoc: "",
+                                  fromLoc: "fdsfsdf",
+                                  toLoc: "fdsff",
                                 ),
                               );
                             },

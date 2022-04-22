@@ -10,21 +10,21 @@ class UpComingRideScreen extends StatefulWidget {
 class _State extends State<UpComingRideScreen> {
   List<String> rideTimes = [
     "Today, 9:30 AM",
-    "Dec 6, 2019 8:25 AM",
-    "Dec 5, 2019 8:25 AM"
+    "Feb 6, 2022 11:25 AM",
+    "Feb 5, 2022 8:25 AM"
   ];
-  List<String> rideType = ["Vitt S", "Vitt Xtra", "Vitt S"];
+  List<String> rideType = ["Train First Class", "Taxi (Car)", "Bus A/C"];
   List<String> pickUpAdd = [
-    "38, rue des Nations",
-    "14, boulevard Amiral",
-    "75, Rue Roussy"
+    "Pettah, Colombo",
+    "Pettah, Colombo",
+    "Pettah, Colombo",
   ];
   List<String> dropUpAdd = [
-    "54, rue du Gue Jacquet",
-    "75, Rue Roussy",
-    "14, boulevard Amiral"
+    "Naanu Oya, Sri Lanka",
+    "Ella, Sri Lanka",
+    "Anuradhapura, Sri Lanka"
   ];
-  List<String> amount = ["€ 43.10", "€ 33.60", "€ 12.14"];
+  List<String> amount = ["LKR 430.99", "LKR 330.60", "LKR 1200.4"];
   List<String> image = [
     "assets/mapiamge.jpeg",
     "assets/mapiamge.jpeg",

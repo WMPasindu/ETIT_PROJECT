@@ -182,7 +182,7 @@ class _HomeState extends State<Home> {
         return "Loyalty Program";
         break;
       case 5: // Feel Good
-        return "Feel Good";
+        return "Health Status";
         break;
       case 6: // Help & Support
         return "Help & Support";

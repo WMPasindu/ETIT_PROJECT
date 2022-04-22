@@ -6,7 +6,6 @@ import 'package:flutter_taxi_booking_customer_app/features/home/payment/add_paym
 import 'package:flutter_taxi_booking_customer_app/widgets/flat_button_widget.dart';
 import 'package:flutter_taxi_booking_customer_app/widgets/viit_appbar.dart';
 
-
 class PaymentOptionScreen extends StatelessWidget {
   static const String routeName = "paymentoption";
 
@@ -44,118 +43,6 @@ class _PaymentOptionState extends State<PaymentOption> {
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Container(
-                  height: 45,
-                  width: MediaQuery.of(context)
-                      .size
-                      .width, // this will give you fle
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4.5),
-                      border: Border.all(
-                        width: 1,
-                        color: Color(0xffF3AA05),
-                      )), // xible width not fixed width
-                  child: Row(
-                    children: <Widget>[
-                      Expanded(
-                          flex: 1,
-                          child: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                setState(() {
-                                  personalSelect = true;
-                                  businessSelect = false;
-                                });
-                              });
-                              print(personalSelect);
-                              print(businessSelect);
-                            },
-                            child: Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                      topLeft: const Radius.circular(4.5),
-                                      bottomLeft: const Radius.circular(4.5),
-                                    ),
-                                    color: personalSelect
-                                        ? Color(0xffF3AA05)
-                                        : Colors.white),
-                                alignment: Alignment.topCenter,
-                                child: Center(
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Icon(
-                                        Icons.person,
-                                        size: 24,
-                                        color: personalSelect
-                                            ? Colors.white
-                                            : kLoginBlack,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Text(
-                                        'Personal',
-                                        style: TextStyle(
-                                            fontSize: 16.0,
-                                            color: personalSelect
-                                                ? Colors.white
-                                                : Colors.black,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                      //varaible above
-                                    ],
-                                  ),
-                                )),
-                          )),
-                      Expanded(
-                          flex: 1,
-                          child: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                personalSelect = false;
-                                businessSelect = true;
-                              });
-                            },
-                            child: Container(
-                                alignment: Alignment.bottomCenter,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                      topRight: const Radius.circular(4.5),
-                                      bottomRight: const Radius.circular(4.5),
-                                    ),
-                                    color: businessSelect
-                                        ? Color(0xffF3AA05)
-                                        : Colors.white),
-                                child: Center(
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Icon(
-                                        Viiticons.work,
-                                        size: 20,
-                                        color: businessSelect
-                                            ? Colors.white
-                                            : kLoginBlack,
-                                      ),
-                                      SizedBox(
-                                        width: 12,
-                                      ),
-                                      Text('Business',
-                                          style: TextStyle(
-                                              fontSize: 16.0,
-                                              color: businessSelect
-                                                  ? Colors.white
-                                                  : Colors.black,
-                                              fontWeight: FontWeight.w500)),
-                                      //varaible above
-                                    ],
-                                  ),
-                                )),
-                          )),
-                    ],
-                  ),
-                ),
                 personalSelect
                     ? PersionalPaymentMethodScreen()
                     : BusinessPaymentScreen(),
@@ -183,16 +70,16 @@ class _PersionalPaymentMethodScreenState
   Widget build(BuildContext context) {
     var listText = List<String>();
 
-    listText.add("Cash");
+    listText.add("Travel Card (Azist Card)");
     listText.add("Credit/Debit Card");
-    listText.add("Google Pay");
-    listText.add("Apple Pay");
+    listText.add("Cash");
+    // listText.add("Apple Pay");
 
     return Column(children: <Widget>[
       ListView.builder(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
-        itemCount: 4,
+        itemCount: 3,
         itemBuilder: (
           BuildContext context,
           int index,
@@ -202,7 +89,7 @@ class _PersionalPaymentMethodScreenState
               height: 10,
             ),
             PaymentMethodsWidget(
-              isImage: index > 1 ? true : false,
+              isImage: index > 3 ? true : false,
               assetImage: index == 2 ? "assets/google.png" : "assets/apple.png",
               icon: index == 0 ? Viiticons.cash : Viiticons.payment,
               radioTxt: listText[index],
@@ -365,10 +252,10 @@ class _BusinessPaymentScreenState extends State<BusinessPaymentScreen> {
                       Text(
                         "Get receipts at your work email",
                         style: Theme.of(context).textTheme.caption.copyWith(
-                          color: kTextLoginfaceid,
-                          fontSize: 14,
-                          letterSpacing: 0.17,
-                        ),
+                              color: kTextLoginfaceid,
+                              fontSize: 14,
+                              letterSpacing: 0.17,
+                            ),
                       )
                     ],
                   )
@@ -401,10 +288,10 @@ class _BusinessPaymentScreenState extends State<BusinessPaymentScreen> {
                       Text(
                         "See trip activity all in one place",
                         style: Theme.of(context).textTheme.caption.copyWith(
-                          color: kTextLoginfaceid,
-                          fontSize: 14,
-                          letterSpacing: 0.17,
-                        ),
+                              color: kTextLoginfaceid,
+                              fontSize: 14,
+                              letterSpacing: 0.17,
+                            ),
                       )
                     ],
                   )
@@ -413,7 +300,9 @@ class _BusinessPaymentScreenState extends State<BusinessPaymentScreen> {
             ],
           ),
         ),
-        SizedBox(height: 120,),
+        SizedBox(
+          height: 120,
+        ),
         Row(
           children: <Widget>[
             Expanded(
@@ -422,9 +311,7 @@ class _BusinessPaymentScreenState extends State<BusinessPaymentScreen> {
                 child: FlatButtonWidget(
                   btnTxt: "Turn on",
                   btnColor: kAccentColor,
-                  btnOnTap: () {
-
-                  },
+                  btnOnTap: () {},
                 ),
               ),
             ),

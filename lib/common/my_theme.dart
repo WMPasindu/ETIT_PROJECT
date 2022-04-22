@@ -26,7 +26,7 @@ get kAppThemeData => ThemeData(
         headline1: TextStyle(
           color: kBlack,
         ),
-        titleMedium: TextStyle(
+        bodyText2: TextStyle(
           fontStyle: FontStyle.normal,
           color: kBlack,
         ),

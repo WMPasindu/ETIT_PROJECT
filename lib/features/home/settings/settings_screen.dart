@@ -39,9 +39,9 @@ class _SettingsState extends State<Settings> {
   List<IconData> favAddIcons = [Viiticons.home, Viiticons.work, Viiticons.home];
   List<String> favAddTitle = ["Home", "Work", "Gym"];
   List<String> favAddAddresses = [
-    "50, rue des Lacs, 83400 HYERESS",
-    "19, rue La Boétie 75016 PARIS",
-    "66, avenue Ferdinand de Lesseps 33170"
+    "123, Kottawa, Pittah",
+    "19, MBSL, Colombo",
+    "66, Mansa Fitness, Malabe"
   ];
 
   @override
@@ -79,7 +79,7 @@ class _SettingsState extends State<Settings> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "Melissa Brunt",
+                    "Jane Doe",
                     style: Theme.of(context).textTheme.caption.copyWith(
                           color: kLoginBlack,
                           fontSize: 18,
@@ -89,7 +89,7 @@ class _SettingsState extends State<Settings> {
                     height: 5,
                   ),
                   Text(
-                    "+33 0464067013",
+                    "+94 71 111111",
                     style: Theme.of(context).textTheme.caption.copyWith(
                           color: kTextLoginfaceid,
                           fontSize: 15,
@@ -99,7 +99,7 @@ class _SettingsState extends State<Settings> {
                     height: 5,
                   ),
                   Text(
-                    "melissa.brunt69@gmail.com",
+                    "etit_grp6@my.sliit.lk",
                     style: Theme.of(context).textTheme.caption.copyWith(
                           color: Colors.black38,
                           fontSize: 15,
@@ -221,7 +221,7 @@ class _SettingsState extends State<Settings> {
               PrivacyWidget(
                 myTitle: "Location",
                 mydeisc:
-                    "Vitt use your device's loation screvice for more  reliable rides",
+                    "Azist use your device's loation screvice for more  reliable rides",
               ),
               SizedBox(
                 height: 15,
@@ -243,69 +243,6 @@ class _SettingsState extends State<Settings> {
         ),
         SizedBox(
           height: 15,
-        ),
-        Container(
-          height: 4,
-          width: MediaQuery.of(context).size.width,
-          color: kSettingDivider,
-        ),
-        SizedBox(
-          height: 21,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(
-            left: 20,
-            right: 20,
-          ),
-          child: Text(
-            "Currency",
-            style: Theme.of(context).textTheme.caption.copyWith(
-                  color: kLoginBlack,
-                  fontSize: 20,
-                ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(
-            top: 6,
-            left: 10,
-            right: 28,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              MyRadioText(
-                text: "Euro",
-                myVal: 1,
-                myGroupVal: selectCurrency,
-                myOnChanged: (val) {
-                  setState(() {
-                    selectCurrency = val;
-                  });
-                },
-              ),
-              MyRadioText(
-                text: "Dollar",
-                myVal: 2,
-                myGroupVal: selectCurrency,
-                myOnChanged: (val) {
-                  setState(() {
-                    selectCurrency = val;
-                  });
-                },
-              ),
-              MyRadioText(
-                text: "GBP",
-                myVal: 3,
-                myGroupVal: selectCurrency,
-                myOnChanged: (val) {
-                  setState(() {
-                    selectCurrency = val;
-                  });
-                },
-              ),
-            ],
-          ),
         ),
         SizedBox(
           height: 15,
@@ -341,7 +278,7 @@ class _SettingsState extends State<Settings> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               MyRadioText(
-                text: "French",
+                text: "English",
                 myVal: 1,
                 myGroupVal: selectLanguage,
                 myOnChanged: (val) {
@@ -354,7 +291,7 @@ class _SettingsState extends State<Settings> {
                 width: 28,
               ),
               MyRadioText(
-                text: "English",
+                text: "සිංහල",
                 myVal: 2,
                 myGroupVal: selectLanguage,
                 myOnChanged: (val) {
